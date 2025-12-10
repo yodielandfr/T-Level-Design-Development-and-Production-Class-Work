@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Euphoria Project</title>
+    <link rel="icon" type="png" href="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\EUPHORIAPROJECTLOGO.png">
 
-    <style>
-        @media (min-width: 500px) and (max-width: 1500px) {
-            h1 {color: black; text-align: center; font-family:Verdana, Geneva, Tahoma, sans-serif;}
-        }
+<style>
 
-        @media (min-width: 0px) and (max-width: 499px) {
-            h1 {color:indigo; font-style: italic;}
-        }
-    </style>
+/* 
+@media (min-width: 0px) and (max-width: 499px) {
+    h1 {color:indigo; font-style: italic;}
+}
+*/
 
-    <style>
 body {
     margin: 0px;
     padding: 0px;
@@ -28,48 +26,144 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color:gray;
-}
-
-ul li {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 60px;
 }
 
 ul li a {
-    display:block;
+    display:inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
-    padding-top: 35px;
     text-decoration: none;
-    font-size:x-large;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 4px;
 }
 
 ul li a:hover {
     background-color:darkgray;
 }
 
-ul img:hover {
-    transform: scale(1.15);
+ul li:first-child {
+    margin-right: auto
 }
 
-.productinfo {
-    float: left;
+ul img:hover {
+    transform: scale(1.15);
+    transition: transform 0.1s ease-in
+}
+
+.brand_desc {
+    text-align: center;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 220px);
+    gap: 25px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background-color: rgb(206, 206, 206);
+}
+
+.grid-item1 {
+    grid-column-start: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+}
+
+.grid-item2 {
+    grid-column-start: 1;
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+}
+
+.grid-item3 {
+    grid-column-start: 1;
+    grid-row: 3;
+    width: 100%;
+    height: auto;
+}
+
+.grid-item4 {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    text-align:center;
+    display: flex;
+    align-items: center;
+}
+
+.grid-item5 {
+    grid-column-start: 3;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+}
+
+.grid-item6 {
+    grid-column-start: 3;
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+}
+
+.grid-item7 {
+    grid-column-start: 3;
+    grid-row: 3;
+    width: 100%;
+    height: auto;
+}
+
+.grid-item8 {
+    grid-column-start: 4;
+    grid-row: 1 / 4;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 #pagesplit {
-    width: 1480px;
-    height: 820px;
+    /*width: 1480px;*/
+    /*height: 820px;*/
+    width: 100%;
+    max-width: 1480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-p, .productinfo {
+p, .grid-item4, .grid-item8 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 60px;
     padding: 0px;
 }
 
-h2, h3, h4 {
+h1, h2, h3, h4, h5{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 30px;
+    margin: 10px;
+    padding: 30px;
+}
+
+h3 {
+    font-size: large;
+    text-align: center;
+    padding: 0px;
+}
+
+h5 {
+    text-decoration: underline;
+    font-size: large;
+    text-align: center;
     padding: 0px;
 }
 
@@ -79,10 +173,31 @@ h2, h3, h4 {
 
 .button:hover {
     transform: scale(1.15);
+    transition: transform 0.1s ease-in
 }
 
 .reviews {
     text-align: center;
+}
+
+.summary p {
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.grid-item1:hover, .grid-item2:hover, .grid-item3:hover, .grid-item5:hover, .grid-item6:hover, .grid-item7:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in
+}
+
+.grid-item4:hover, .grid-item8:hover {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in
+}
+
+.grid-item4, .grid-item8 {
+    font-size: large;
 }
 
 </style>
@@ -93,7 +208,7 @@ h2, h3, h4 {
 <body>
     <div>
         <ul>
-            <img src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\EUPHORIAPROJECTLOGO.png" alt="LOGO" width="150px" height=auto;>
+            <li><img src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\EUPHORIAPROJECTLOGO.png" alt="LOGO" width="150px" height=auto;></li>
             <li><a href="#Product Catalog">Product Catalog</a></li>
             <li><a href="#About Us">About Us</a></li>
             <li><a href="#Account">Account</a></li>
@@ -102,15 +217,15 @@ h2, h3, h4 {
     </div>
 <br>
     <div>
-        <h1>Welcome to the Euphoria Project</h1>
+        <h1 style="text-align: center;">Welcome to the Euphoria Project</h1>
     </div>
 
-    <div>
+    <div class="brand_desc">
         <p>
-            The Euphoria Project was created to bridge the gap in clothing. Through trial and error and even some product analysis from the top industry names, The Euphoria Project has analysed design floors and missed product opportunities to deliver the most unique and aesthetically pleasing pieces.
+            The Euphoria Project was created to bridge the gap in clothing. Through trial and error and thorough product analysis from the top industry names, We have carefully analysed design floors and missed product opportunities to deliver the most unique and aesthetically pleasing pieces.
         </p>
         <p>
-            Designed from your visions, For your vision.
+            Designed from our visions, For your Satisfaction.
         </p>
     </div>
 <br>
@@ -123,24 +238,25 @@ h2, h3, h4 {
         <img class="button" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\catalog button.png" alt="View Catalog">
     </div>
 <br>
-    <div>
-        <section>
-            <h2>Our Collections</h2>
-            <article class="productinfo">Explore The “Grunge Greyscale” Collection, designed for a heavy and warm feel. Utilising puff prints and embroidered patchwork</article>
-            <img class="productimg" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\grunge greyscale.png" alt="Grunge Greyscale Collection">
-            <br>
-            <br>
-            <article class="productinfo">Explore The "Punchline Prominence" Collection, Inspired by the mundane day-to-day, remastered for an artistic edge</article>
-            <img class="productimg" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\punchline prominence.png" alt="Punchline Prominence Collection">
-        </section>
-    </div>
+<h2>Our Collections</h2>
+    <div class="grid-layout">
+        <img class="grid-item1" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\greenhoodie.png" alt="green hoodie">
+        <img class="grid-item2" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\purphoodie (1).png" alt="purple hoodie">
+        <img class="grid-item3" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\blackhoodie (1).png" alt="black hoodie">
+        <p class="grid-item4" href="#grunge greyscale">Explore The “Grunge Greyscale” Collection, designed for a heavy and warm feel. Utilising puff prints and embroidered patchwork</p>
+        <img class="grid-item5" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\y2kblack (1).png" alt="y2k black hoodie">
+        <img class="grid-item6" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\nyblack (1).png" alt="ny black hoodie">
+        <img class="grid-item7" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\macheblack (1).png" alt="black mache hoodie">
+        <p class="grid-item8" href="Punchline Prominence">Explore The "Punchline Prominence" Collection, Inspired by the mundane day-to-day, remastered for an artistic edge</p>
+        </div>
 <br>
     <div>
         <img id="pagesplit" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\train image.png" alt="Page Splitter">
     </div>
 <br>
-    <div>
-        <h3>Modern Design, Modern Fashion, Modern Look.</h3>
+    <div class="summary">
+        <h3>Modern Design, Modern Fashion,  </h3>
+        <h5>Modern Look.</h5>
         <p>Our pieces dont just come fresh out of the box, each piece is hand created and hand embroided to ensure each product gets the love it deserves. From inspiration to final product, each product is created with precision and care to ensure you fall in love with your new piece. Each element of the design phase all the way to final production has been thought out and perfected with one goal in mind: To surpass your expectation.</p>
         <h4>Dont believe us? See what customers have said...</h4>
         <br>
@@ -151,7 +267,7 @@ h2, h3, h4 {
     </div>
 <br>
 
+
+
 </body>
-
-
 </html>
