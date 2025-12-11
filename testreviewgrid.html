@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .review-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, auto);
+            gap: 12px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(237, 237, 237);
+        }
+
+        .review-grid-layout img {
+            border-radius: 10px;
+        }
+
+        .review-grid-layout img:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in
+        }
+
+        .rev1 {
+            grid-column-start: 1;
+        }
+
+        .rev2 {
+            grid-column-start: 2;
+        }
+
+        .rev3 {
+            grid-column-start: 3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="review-grid-layout">
+        <img class="rev1" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\review1 (1).png" alt="Review 1">
+        <img class="rev2" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\review2 (1).png" alt="Review 2">
+        <img class="rev3" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\review3 (1).png" alt="Review 3">
+    </div>
+</body>
+
+</html>
