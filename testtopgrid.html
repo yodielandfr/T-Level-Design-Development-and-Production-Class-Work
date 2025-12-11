@@ -6,25 +6,116 @@
     <title>Document</title>
 
     <style>
-    .grid-layout {
+    .top-grid-layout {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 220px);
-        gap: 25px;
-        padding-left: 200px;
-        padding-right: 200px;
-        padding-bottom: 25px;
-        padding-top: 25px;
+        grid-template-rows: repeat(2, auto);
+        gap: 12px;
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 20px;
         background-color: rgb(206, 206, 206);
     }
+
+    .top-grid-layout img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    .top-grid-layout img:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in
+    }
+    
+    .tgi-1 {
+        grid-column-start: 1;
+        grid-row: 1;
+    }
+
+    .tgi-2 {
+        grid-column-start: 2;
+        grid-row: 1;
+    }
+
+    .tgi-3 {
+        grid-column-start: 3;
+        grid-row: 1;
+    }
+
+    .tgi-4 {
+        grid-column-start: 4;
+        grid-row: 1;
+    }
+
+    .tgi-5 {
+        grid-column-start: 1;
+        grid-row: 2;
+    }
+
+
+    .tgi-6 {
+        grid-column-start: 2;
+        grid-row: 2;
+    }
+
+
+    .tgi-7 {
+        grid-column-start: 3;
+        grid-row: 2;
+    }
+
+
+    .tgi-8 {
+        grid-column-start: 4;
+        grid-row: 2;
+    }
+
+    .catalog-button {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .catalog-button button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .catalog-button button:hover {
+        transform: scale(1.15);
+        transition: transform 0.1s ease-in
+    }
+
     </style>
 
 </head>
 
 
 <body>
-    <div class="grid-layout">
-        
+    <div class="top-grid-layout">
+        <img class="tgi-1" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\blackhoodie (1).png" alt="Black Grunge Greyscale">
+        <img class="tgi-2" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\macheblack (1).png" alt="Mache Black">
+        <img class="tgi-3" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\nyblack (1).png" alt="NewYork Black">
+        <img class="tgi-4" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\y2kblack (1).png" alt="Y2K black">
+        <img class="tgi-5" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\quote (1).png" alt="Quoted Black">
+        <img class="tgi-6" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\mountains (1).png" alt="Mountains Black">
+        <img class="tgi-7" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\skulls (1).png" alt="Skulls Black">
+        <img class="tgi-8" src="C:\Users\User\Documents\GitHub\T-Level-Design-Development-and-Production-Class-Work\static\japanesecar (1).png" alt="Japanese Car Black">
+        <div class="catalog-button">
+            <button>Visit Product Catalog</button>
+        </div>
     </div>
 </body>
 </html>
