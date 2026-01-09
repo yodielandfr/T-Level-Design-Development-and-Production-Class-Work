@@ -341,7 +341,21 @@ footer {
     max-width: 200px;
     margin-left: 10%;
     padding-top: 25px;
-    padding-bottom: 50px;  
+    padding-bottom: 50px;;
+}
+
+.footer-grid p:hover {
+    color: purple;
+    cursor: pointer;
+}
+
+.footer-grid img:hover {
+    cursor: default;
+}
+
+.footer-grid > .footer-branding:hover {
+    cursor: default;
+    color: black;
 }
 
 .footer-branding {
