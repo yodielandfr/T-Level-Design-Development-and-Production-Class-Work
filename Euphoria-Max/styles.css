@@ -249,7 +249,7 @@ p, .grid-item4, .grid-item8 {
     padding: 0px;
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
             font-family: "inter", sans-serif;
             font-style: "semibold";
             font-weight: 700;
@@ -327,6 +327,35 @@ h5 {
 
 .rev3 {
     grid-column-start: 3;
+}
+
+.suggestions {
+    background-color: rgb(143, 236, 250);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.suggestions h6 {
+    font-family: "inter", sans-serif;
+    font-style: "semibold";
+    font-weight: 700;
+    margin: 20px;
+    padding: 90px;
+    font-size:x-large;
+    text-align: left;
+}
+
+.scroll-button:link, .scroll-button:visited {
+    font-family: "inter", sans-serif;
+    font-style: "semibold";
+    font-weight: 450;
+    background-color: darkgray;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 footer {
