@@ -13,8 +13,252 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-</head>
+    <style>
+/* Tablet portrait (768px and below) */
+@media (max-width: 768px) {
+    /* Navigation */
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: auto;
+    }
+    
+    ul li:first-child {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    ul li a {
+        padding: 10px 12px;
+        font-size: medium;
+    }
+    
+    /* Top grid - 2 columns */
+    .top-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        max-width: 400px;
+        padding: 15px;
+    }
+    
+    .tgi-1 { grid-column: 1; grid-row: 1; }
+    .tgi-2 { grid-column: 2; grid-row: 1; }
+    .tgi-3 { grid-column: 1; grid-row: 2; }
+    .tgi-4 { grid-column: 2; grid-row: 2; }
+    .tgi-5 { grid-column: 1; grid-row: 3; }
+    .tgi-6 { grid-column: 2; grid-row: 3; }
+    .tgi-7 { grid-column: 1; grid-row: 4; }
+    .tgi-8 { grid-column: 2; grid-row: 4; }
+    
+    .catalog-button {
+        grid-row: 5;
+    }
+    
+    /* Collections grid */
+    .grid-layout {
+        padding-left: 20px;
+        padding-right: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+    
+    .grid-item1, .grid-item2, .grid-item3,
+    .grid-item5, .grid-item6, .grid-item7 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .grid-item4, .grid-item8 {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: medium;
+    }
+    
+    /* Reviews - 1 column */
+    .review-grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        max-width: 400px;
+        padding: 15px;
+    }
+    
+    .rev1, .rev2, .rev3 {
+        grid-column: 1;
+    }
+    
+    .rev1 { grid-row: 1; }
+    .rev2 { grid-row: 2; }
+    .rev3 { grid-row: 3; }
+    
+    /* Typography */
+    .brand_desc {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .summary p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    h1, h2, h3, h4, h5 {
+        padding: 15px;
+    }
+    
+    p, .grid-item4, .grid-item8 {
+        margin: 15px;
+    }
+    
+    .suggestions h6 {
+        padding: 40px;
+        font-size: large;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .footer-branding {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
+    }
+    
+    .footer-icons {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        max-width: 100%;
+        padding-left: 0;
+    }
+    
+    .fgi-1, .fgi-5, .fgi-9 { grid-row: 3; }
+    .fgi-2, .fgi-6, .fgi-10 { grid-row: 4; }
+    .fgi-3, .fgi-7, .fgi-11 { grid-row: 5; }
+    .fgi-4, .fgi-8, .fgi-12 { grid-row: 6; }
+    
+    .fgi-1, .fgi-2, .fgi-3, .fgi-4 { grid-column: 1; }
+    .fgi-5, .fgi-6, .fgi-7, .fgi-8 { grid-column: 2; }
+    .fgi-9, .fgi-10, .fgi-11, .fgi-12 { grid-column: 1 / -1; }
+}
 
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    /* Navigation */
+    ul li a {
+        padding: 8px 10px;
+        font-size: small;
+    }
+    
+    ul img {
+        max-width: 100px;
+    }
+    
+    /* Top grid - 2 columns, tighter */
+    .top-grid-layout {
+        max-width: 100%;
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    /* Catalog button */
+    .catalog-button button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    /* Collections grid */
+    .grid-layout {
+        padding: 15px 10px;
+        gap: 12px;
+    }
+    
+    .grid-item4, .grid-item8 {
+        font-size: small;
+    }
+    
+    /* Page split image */
+    #pagesplit {
+        max-width: 100%;
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3, h5 {
+        font-size: medium;
+    }
+    
+    .suggestions h6 {
+        padding: 20px;
+        font-size: medium;
+        margin: 10px;
+    }
+    
+    /* Reviews */
+    .review-grid-layout {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .footer-branding,
+    .fgi-1, .fgi-2, .fgi-3, .fgi-4,
+    .fgi-5, .fgi-6, .fgi-7, .fgi-8,
+    .fgi-9, .fgi-10, .fgi-11, .fgi-12 {
+        width: 100%;
+        grid-column: 1;
+    }
+    
+    .scroll-button:link, .scroll-button:visited {
+        padding: 10px 18px;
+        font-size: small;
+    }
+}
+
+/* Very small mobile (360px and below) */
+@media (max-width: 360px) {
+    ul li a {
+        font-size: x-small;
+        padding: 6px 8px;
+    }
+    
+    .catalog-button button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    .brand_desc {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+    </style>
+</head>
 
 <body>
     <a id="scroll-top"></a>
